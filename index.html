@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+  <!-- Title -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">
+          <b>Learn about flight delays</b>
+        </h1>
+        <p class="text-center lead">Delay's probable between 11pm-3am</p>
+        <p class="lead">
+          Based on <a href="http://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp">RITA flight delay information</a> for US domestic flights in 2008, bar chart below let's you explore
+          the relationship between <b>average departure delay time</b> during different time periods.
+        </p>
+        <p class="lead">
+          The average flight delay between US domestic flights is <b>9 minutes</b>. However, this is simple average calculation and cannot be trusted always.
+        </p>
+        
+      </div>
+    </div>
+    <!-- end of row -->
+
+
+    <br>
+
+    <section class="fill">
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Average flight delays by hour of day <small>(minutes)</small></h2>
+          <div id="hourBar"></div>
+          <p><small>*Note: Red bars indicate delays of more than 40 minutes.</small></p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <p class="lead">
+            It is evident that passangers wait longer on flights <em>scheduled</em> to depart between 11pm to 3am. This graph provides
+            a quick overview of the potentially best times to fly during any day of the week.
+              <small>(Howver, at 5-6am there is negative time delay)</small>.
+          </p>
+          <p class="lead">
+            <em>Next is an interesting correlation...</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="fill">
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Number of flights by hour of day</h2>
+          <div id="hourNumberOfFlights"></div>
+          <p><small>*Note: Red bars indicate number of flights less than 50,000.</small></p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <p class="lead">
+            From the chart above, average flight delays appear to be inversely related to the volume
+            of flights happening in a given hour. It can be observed that, <b>hours with the highest number of flights also have
+            the lowest average delay times</b>. There seems to be one exception though, at 4am
+            there is a relatively low volume of flights and a low average delay time. This pattern may be attributed to the fact of having less number of support staff during odd operating hours.
+          </p>
+        <p class="lead">
+            <em>Next, let's check out how the schedule goes during holidays...</em>
+          </p>
+            
+       </div>
+      </div>
+    </section>
+
+
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="text-center">Average flight delays by month <small>(minutes)</small></h2>
+        <div id="chartContainer"></div>
+        <p><small>*Note: Red dots indicate delays of more than 9 minutes (the average)</small></p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <p class="lead">
+          December, having the holiday season clearly stands out as the month with longest average flight delay,
+          over <b>17 minutes</b>. But the difference between the best and worst months
+          is just <b>13 minutes</b>, while the difference between the best and worst hour of day
+          is a staggaring <b>130 minutes</b> 
+        </p>
+        <p class="lead">
+          <em>This analysis can help us conclude to avoid booking flights between delay prone hours of the day i.e. 11pm-3am.</em>
+        </p>
+        <br>
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
+  <!-- end of container -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/dimple.v2.1.2.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+
+
+
+
+  </body>
+  </html>
